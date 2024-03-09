@@ -30,7 +30,7 @@ jobs:
             IMAGE_TAG: testimage
             
           run: |
-            docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+            docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG Dockerfile
             docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
             echo "IMAGE $IMAGE_TAG is pushed to $ECR_REGISTRY/$ECR_REPOSITORY"
             echo "image_tag=$IMAGE_TAG" 
